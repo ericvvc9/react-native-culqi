@@ -1,5 +1,3 @@
-import { NativeModules } from 'react-native';
-
-const { Culqi } = NativeModules;
+import Culqi from './src/Culqi';
 
 export default Culqi;

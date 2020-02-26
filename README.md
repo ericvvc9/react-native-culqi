@@ -2,42 +2,18 @@
 
 ## Getting started
 
-`$ npm install react-native-culqi --save`
-
-### Mostly automatic installation
-
-`$ react-native link react-native-culqi`
-
-### Manual installation
-
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-culqi` and add `Culqi.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libCulqi.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import com.reactlibrary.CulqiPackage;` to the imports at the top of the file
-  - Add `new CulqiPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-culqi'
-  	project(':react-native-culqi').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-culqi/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-culqi')
-  	```
-
+`$ npm install https://github.com/ericvvc9/react-native-culqi --save`
 
 ## Usage
 ```javascript
 import Culqi from 'react-native-culqi';
 
-// TODO: What to do with the module?
-Culqi;
+Culqi.createToken({
+  card_number:'',
+  cvv:'',
+  expiration_month:'',
+  expiration_year:'',
+  email:'',
+}, TOKEN_API)
+
 ```

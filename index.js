@@ -1,6 +1,8 @@
-import type from 'type-detect'
 import axios from 'axios';
-
+const Config = {
+  url_base: "https://api.culqi.com/v2",
+  url_base_secure: "https://secure.culqi.com/v2",
+}
 class Culqi {
 
   static _Listeners = {
@@ -16,7 +18,7 @@ class Culqi {
     expiration_year:'',
     email:'',
   },token)  => {
-    return axios({
+    return axios.request({
       method:'POST',
       url:Config.url_base_secure+"/tokens/",
       data:card,

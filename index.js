@@ -1,4 +1,5 @@
 import type from 'type-detect'
+import axios from 'axios';
 
 class Culqi {
 
@@ -15,7 +16,7 @@ class Culqi {
     expiration_year:'',
     email:'',
   },token)  => {
-    return axios('', {
+    return axios({
       method:'POST',
       url:Config.url_base_secure+"/tokens/",
       data:card,

@@ -6,8 +6,9 @@
 
 ## Usage
 ```javascript
-import Culqi from 'react-native-culqi';
+import {Culqi} from 'react-native-culqi'
 
+let TOKEN_API ="xxxxx..."
 Culqi.createToken({
   card_number:'',
   cvv:'',

@@ -1,34 +1,46 @@
 {
   "name": "react-native-culqi",
-  "title": "React Native Culqi",
-  "version": "1.0.0",
-  "description": "TODO",
+  "version": "1.0.9",
+  "author": "Eric Vargas <ericvvc9@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest --no-cache",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-culqi.git",
-    "baseUrl": "https://github.com/github_account/react-native-culqi"
+    "url": "https://github.com/ericvvc9/react-native-culqi"
+  },
+  "bugs": {
+    "url": "https://github.com/ericvvc9/react-native-culqi/issues"
   },
   "keywords": [
-    "react-native"
+    "react",
+    "react-native",
+    "culqi"
   ],
-  "author": {
-    "name": "Eric Vargas",
-    "email": "ericvvc9@email.com"
-  },
+  "tags": [
+    "react",
+    "react-native",
+    "culqi"
+  ],
   "license": "MIT",
-  "licenseFilename": "LICENSE",
-  "readmeFilename": "README.md",
-  "peerDependencies": {
-    "react": "^16.8.1"
+  "dependencies": {
+    "type-detect": "^4.0.8",
+    "axios": "^0.19.0"
   },
   "devDependencies": {
-    "react": "^16.8.3"
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/preset-env": "^7.7.1",
+    "coveralls": "^3.0.7",
+    "jest": "^24.9.0"
   },
-  "dependencies": {
-    "axios": "^0.19.0"
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js"
+    ]
   }
 }
